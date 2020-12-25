@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="loyaltyCard">
+            <h2><span jhiTranslate="tpsoaApp.loyaltyCard.detail.title">Loyalty Card</span> {{ loyaltyCard.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="tpsoaApp.loyaltyCard.rewardPoints">Reward Points</span></dt>
+                <dd>
+                    <span>{{ loyaltyCard.rewardPoints }}</span>
+                </dd>
+                <dt><span jhiTranslate="tpsoaApp.loyaltyCard.createdAt">Created At</span></dt>
+                <dd>
+                    <span>{{ loyaltyCard.createdAt }}</span>
+                </dd>
+                <dt><span jhiTranslate="tpsoaApp.loyaltyCard.expiredAt">Expired At</span></dt>
+                <dd>
+                    <span>{{ loyaltyCard.expiredAt }}</span>
+                </dd>
+                <dt><span jhiTranslate="tpsoaApp.loyaltyCard.client">Client</span></dt>
+                <dd>
+                    <div *ngIf="loyaltyCard.clientId">
+                        <a [routerLink]="['/client', loyaltyCard.clientId, 'view']">{{ loyaltyCard.clientCin }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/loyalty-card', loyaltyCard.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

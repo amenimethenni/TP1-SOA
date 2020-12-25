@@ -1,0 +1,25 @@
+{
+  "tpsoaApp": {
+    "loyaltyCard": {
+      "home": {
+        "title": "LoyaltyCards",
+        "createLabel": "Créer un nouveau Loyalty Card",
+        "createOrEditLabel": "Créer ou éditer un Loyalty Card",
+        "notFound": "Aucun Loyalty Card trouvé"
+      },
+      "created": "Un nouveau Loyalty Card a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Loyalty Card avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Loyalty Card avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Loyalty Card {{ id }} ?"
+      },
+      "detail": {
+        "title": "Loyalty Card"
+      },
+      "rewardPoints": "Reward Points",
+      "createdAt": "Created At",
+      "expiredAt": "Expired At",
+      "client": "Client"
+    }
+  }
+}

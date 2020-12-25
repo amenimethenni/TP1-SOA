@@ -1,0 +1,62 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [
+    {
+      "relationshipName": "order",
+      "otherEntityName": "order",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "client"
+    },
+    {
+      "relationshipName": "loyaltyCard",
+      "otherEntityName": "loyaltyCard",
+      "relationshipType": "one-to-one",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "client"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength", "pattern"],
+      "fieldValidateRulesMinlength": "3",
+      "fieldValidateRulesMaxlength": 20,
+      "fieldValidateRulesPattern": "(^[a-zA-Z]*$)"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength", "pattern"],
+      "fieldValidateRulesMinlength": "3",
+      "fieldValidateRulesMaxlength": 20,
+      "fieldValidateRulesPattern": "(^[a-zA-Z]*$)"
+    },
+    {
+      "fieldName": "cin",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "minlength", "maxlength", "pattern"],
+      "fieldValidateRulesMinlength": "8",
+      "fieldValidateRulesMaxlength": "8",
+      "fieldValidateRulesPattern": "(^[0-9]*$)"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "minlength", "maxlength", "pattern"],
+      "fieldValidateRulesMinlength": "8",
+      "fieldValidateRulesMaxlength": "8",
+      "fieldValidateRulesPattern": "(^[0-9]*$)"
+    }
+  ],
+  "changelogDate": "20201219144300",
+  "dto": "mapstruct",
+  "searchEngine": false,
+  "service": "serviceImpl",
+  "entityTableName": "client",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "no"
+}
